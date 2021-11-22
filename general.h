@@ -17,15 +17,6 @@ Compilateur    : Mingw-w64 g++ 11.1.0
 #include <string>
 
 //-----------------------------------------------------------------------------------
-// Fonction saisie
-//-----------------------------------------------------------------------------------
-// But        récupérer et contôler l'entrée de l'utilisateur.
-// @param     MSG_ERREUR  message à afficher en cas d'entrée erronée
-// Return     saisie de l'utilisateur.
-// Exception  n/a
-int saisie(const std::string& MSG_ERREUR);
-
-//-----------------------------------------------------------------------------------
 // Fonction saisieIntervalle
 //-----------------------------------------------------------------------------------
 // But        récupérer et contôler la saisie de l'utilisateur dans un intervalle
@@ -35,6 +26,6 @@ int saisie(const std::string& MSG_ERREUR);
 // @param     MSG_ERREUR  message à afficher en cas d'entrée erronée.
 // Return     saisie de l'utilisateur.
 // Exception  n/a
-int saisieIntervalle(int min, int max, const std::string& MSG_ERREUR);
+int saisieIntervalle(int min, int max, const std::string& MSG_ERREUR="");
 
 #endif //LABO06CRIBLE_GENERAL_H

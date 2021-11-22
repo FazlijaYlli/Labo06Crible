@@ -23,8 +23,8 @@ Compilateur    : Mingw-w64 g++ 11.1.0
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include "general.h" // saisie(), saisieIntervalle()
-#include "crible.h"  // triEratosthene(), afficherTableauEratosthene(),
+#include "general.h" // saisieIntervalle()
+#include "crible.h"  // cribleEratosthene(), afficherTableauEratosthene(),
                      // afficherListesNombresPremiers()
 
 using namespace std;
@@ -38,7 +38,7 @@ int main() {
    constexpr int NB_COLONNES  = 10;
    const string MSG_BIENVENUE = "Bienvenue dans le Labo 06 - Crible !";
    const string MSG_INVITE    = "> Veuillez entrer un nombre dans l'intervalle ";
-   const string MSG_ERREUR    = "Veuillez saisir un nombre entier";
+   const string MSG_ERREUR    = "> Erreur d'entree, veuillez reessayer : ";
    const string MSG_QUITTER   = "Presser ENTER pour quitter ";
 
    //--------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ int main() {
    //--------------------------------------------------------------------------------
    int tableau_intervalle[TAILLE];
 
-   triEratosthene(tableau_intervalle, TAILLE);
+   cribleEratosthene(tableau_intervalle, TAILLE);
 
    //--------------------------------------------------------------------------------
    // Affichage à l'utilisateur

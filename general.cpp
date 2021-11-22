@@ -19,20 +19,15 @@ Compilateur    : Mingw-w64 g++ 11.1.0
 
 using namespace std;
 
-int saisie(const string& MSG_ERREUR) {
-   int entree;
-   if(!(cin >> entree)) {
-      cin.clear();
-      cout << MSG_ERREUR;
-   }
-   cin.ignore(numeric_limits<streamsize>::max(),'\n');
-   return entree;
-}
-
 int saisieIntervalle(int MIN, int MAX, const string& MSG_ERREUR) {
    int entree;
    do {
-      entree = saisie(MSG_ERREUR);
+      cin >> entree;
+      if(!(cin.good()) || (entree < MIN || entree > MAX)) {
+         cin.clear();
+         cout << MSG_ERREUR;
+      }
+      cin.ignore(numeric_limits<streamsize>::max(),'\n');
    } while (entree < MIN || entree > MAX);
    return entree;
 }

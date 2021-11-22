@@ -16,7 +16,7 @@ Compilateur    : Mingw-w64 g++ 11.1.0
 
 using namespace std;
 
-void triEratosthene(int tableau[], int taille) {
+void cribleEratosthene(int tableau[], int taille) {
    for(int i = 0; i < taille; ++i ) {
       tableau[i] = i + 1;
    }
@@ -46,11 +46,11 @@ nb_premier, char autre) {
          cout << nb_premier << ' ';
       }
 
-      if (i != 0 && (i + 1) % nb_colonnes == 0) {
+      if (i != 0 && i != taille - 1 && (i + 1) % nb_colonnes == 0) {
          cout << endl;
       }
    }
-   cout << endl;
+   cout << endl << endl;
 }
 
 void afficherListeNombresPremiers(int tableau[], int taille) {

@@ -16,14 +16,14 @@ Compilateur    : Mingw-w64 g++ 11.1.0
 #define LABO06CRIBLE_CRIBLE_H
 
 //-----------------------------------------------------------------------------------
-// Fonction triEratosthene
+// Fonction cribleEratosthene
 //-----------------------------------------------------------------------------------
 // But        remplacer tous les nombres non-premiers par des 0.
 // @param     tableau  tableau d'entiers.
 // @param     taille   taille du tableau fourni.
 // Return     n/a
 // Exception  n/a
-void triEratosthene(int tableau[], int taille);
+void cribleEratosthene(int tableau[], int taille);
 
 //-----------------------------------------------------------------------------------
 // Fonction afficherTableauEratosthene
