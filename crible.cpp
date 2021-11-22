@@ -17,10 +17,13 @@ Compilateur    : Mingw-w64 g++ 11.1.0
 using namespace std;
 
 void cribleEratosthene(int tableau[], int taille) {
+
+   // Remplissage du tableau par des valeurs de 1 à taille
    for(int i = 0; i < taille; ++i ) {
       tableau[i] = i + 1;
    }
 
+   // Première boucle itérant sur le tableau.
    for(int i = 0; i < taille; ++i) {
       if (tableau[i] == 0) {
          continue;
@@ -46,7 +49,10 @@ nb_premier, char autre) {
          cout << nb_premier << ' ';
       }
 
-      if (i != 0 && i != taille - 1 && (i + 1) % nb_colonnes == 0) {
+      // on ajoute un retour à la ligne à l'élément correspondant au nombre de colonnes
+      // (e.g. à chaque dizaine d'éléments)
+      // Par contre, il n'est pas ajouté lors de l'écriture du dernier élément.
+      if (i != taille - 1 && (i + 1) % nb_colonnes == 0) {
          cout << endl;
       }
    }
@@ -68,6 +74,5 @@ unsigned compteurNombresPremiers(int tableau[], int taille) {
          ++compteur;
       }
    }
-
    return compteur;
 }

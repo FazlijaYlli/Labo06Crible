@@ -20,9 +20,9 @@ Compilateur    : Mingw-w64 g++ 11.1.0
 -------------------------------------------------------------------------------------
 */
 
-#include <iostream>
-#include <string>
-#include <cstdlib>
+#include <iostream>  // Input / Output de base.
+#include <string>    // Stockage des messages dans des constantes.
+#include <cstdlib>   // EXIT_SUCCESS;
 #include "general.h" // saisieIntervalle()
 #include "crible.h"  // cribleEratosthene(), afficherTableauEratosthene(),
                      // afficherListesNombresPremiers()
@@ -33,8 +33,8 @@ int main() {
    //--------------------------------------------------------------------------------
    // Constantes
    //--------------------------------------------------------------------------------
-   constexpr int MIN          = 1;
-   constexpr int MAX          = 500;
+   constexpr int MIN          = 1;     // Minimum de l'intervalle du tableau.
+   constexpr int MAX          = 100;   // Maximum de l'intervalle du tableau.
    constexpr int NB_COLONNES  = 10;
    const string MSG_BIENVENUE = "Bienvenue dans le Labo 06 - Crible !";
    const string MSG_INVITE    = "> Veuillez entrer un nombre dans l'intervalle ";
