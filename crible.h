@@ -34,10 +34,10 @@ void cribleEratosthene(int tableau[], int taille);
 //                         à la place des nombres non-premiers.
 // @param     taille       taille du tableau fourni.
 // @param     nb_colonnes  nombre de colonnes sur lesquelles afficher le tableau.
-// @param     nb_premier   aractère à afficher à la place de chaque nombre
+// @param     nb_premier   caractère à afficher à la place de chaque nombre
 //                         premier du tableau.
-// @param     autre         caractère à afficher à la place de chaque nombre
-//                          non-premier (0) du tableau.
+// @param     autre        caractère à afficher à la place de chaque nombre
+//                         non-premier (0) du tableau.
 // Return     n/a
 // Exception  n/a
 void afficherTableauEratosthene(int tableau[], int taille, int nb_colonnes, char
