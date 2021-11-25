@@ -75,6 +75,12 @@ int main() {
 
    afficherListeNombresPremiers(tableau_intervalle, TAILLE);
 
+   //------------
+   // 2ème partie
+   //------------
+
+
+
    //--------------------------------------------------------------------------------
    // Fin du programme
    //--------------------------------------------------------------------------------
@@ -82,4 +88,15 @@ int main() {
    cin.ignore(numeric_limits<streamsize>::max(),'\n');
 
    return EXIT_SUCCESS;
+}
+
+void afficherTableauEnListe(int tableau[], int taille, char carSeparation = ' ', char carDebut = '\0', char carFin = '\0') {
+   cout << carDebut;
+   for(int i = 0; i < taille; ++i) {
+      if (i + 1 < taille) {
+         cout << carSeparation;
+      }
+      cout << tableau[i];
+   }
+   cout << carFin;
 }
