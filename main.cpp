@@ -29,6 +29,8 @@ Compilateur    : Mingw-w64 g++ 11.1.0
 
 using namespace std;
 
+void afficherTableauEnListe(int tableau[], int taille, const string& separation = ", ", const string& debut = "[", const string& fin = "]");
+
 int main() {
    //--------------------------------------------------------------------------------
    // Constantes
@@ -90,13 +92,13 @@ int main() {
    return EXIT_SUCCESS;
 }
 
-void afficherTableauEnListe(int tableau[], int taille, char carSeparation = ' ', char carDebut = '\0', char carFin = '\0') {
-   cout << carDebut;
+void afficherTableauEnListe(int tableau[], int taille, const string& separation, const string& debut, const string& fin) {
+   cout << debut;
    for(int i = 0; i < taille; ++i) {
       if (i + 1 < taille) {
-         cout << carSeparation;
+         cout << separation;
       }
       cout << tableau[i];
    }
-   cout << carFin;
+   cout << fin;
 }
