@@ -4,6 +4,8 @@ Nom du fichier : crible.cpp
 Nom du labo    : Labo_06_Crible
 Auteur(s)      : Anthony Christen
  					  Fazlija Ylli
+ 					  Mota Carneiro Rui Manuel
+ 					  Bloch Aurélien
 Date creation  : 19.11.2021
 Description    : Définitions des fonctions spécifiques à la méthode du crible
                  d’Eratosthène.
@@ -59,12 +61,29 @@ nb_premier, char autre) {
    cout << endl << endl;
 }
 
-void afficherListeNombresPremiers(int tableau[], int taille) {
-   for(int i = 0; i < taille; ++i) {
+/*
+ * Commentaire du 25.11.2021 par le Groupe Aurélien Bloch - Mota Carneiro Rui Manuel
+ *
+ * Nous avons remarqué que cette fonction n'était pas très réutilisable, mais en
+ * allant dans le sens du labo, nous avons décidé de simplement modifier celle-ci
+ * (malgré l'affichage conditionnel des valeurs) plutôt que d'en créer une nouvelle,
+ * plus réutilisable mais qui y ressemblerait beaucoup.
+ */
+void afficherListeNombresPremiers(int tableau[],
+                                  size_t taille,
+                                  const string& separateur,
+                                  const string& debut,
+                                  const string& fin) {
+   cout << debut;
+   for(size_t i = 0; i < taille; ++i) {
       if (tableau[i] != 0) {
-         cout << tableau[i] << ' ';
+         if (i > 0) {
+            cout << separateur;
+         }
+         cout << tableau[i];
       }
    }
+   cout << fin;
 }
 
 unsigned compteurNombresPremiers(int tableau[], int taille) {

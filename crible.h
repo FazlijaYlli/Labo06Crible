@@ -4,6 +4,8 @@ Nom du fichier : crible.h
 Nom du labo    : Labo_06_Crible
 Auteur(s)      : Anthony Christen
  					  Fazlija Ylli
+ 					  Mota Carneiro Rui Manuel
+ 					  Bloch Aurélien
 Date creation  : 19.11.2021
 Description    : Prototypes des fonctions spécifiques à la méthode du crible
                  d’Eratosthène.
@@ -14,6 +16,8 @@ Compilateur    : Mingw-w64 g++ 11.1.0
 
 #ifndef LABO06CRIBLE_CRIBLE_H
 #define LABO06CRIBLE_CRIBLE_H
+
+#include <string>
 
 //-----------------------------------------------------------------------------------
 // Fonction cribleEratosthene
@@ -49,9 +53,14 @@ nb_premier, char autre);
 // But        afficher tous les nombres premiers du tableau.
 // @param     tableau  tableau d'entiers.
 // @param     taille   taille du tableau fourni.
+// @param     separation   (Optionnel) Chaîne de caractères à afficher entre chaque élément
+// @param     debut        (Optionnel) Chaîne de caractères à afficher au début de la liste
+// @param     fin          (Optionnel) Chaîne de caractères à afficher à la fin de la liste
 // Return     n/a
 // Exception  n/a
-void afficherListeNombresPremiers(int tableau[], int taille);
+void afficherListeNombresPremiers(int tableau[], size_t taille,
+                            const std::string& separateur = " ",
+                            const std::string& debut = "", const std::string& fin = "");
 
 //-----------------------------------------------------------------------------------
 // Fonction compteurNombresPremiers
